@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     
     # Custom apps
     'accounts',
+    'ai',
+    'session'
     
     # installed third party apps
     'rest_framework',
