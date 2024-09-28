@@ -111,8 +111,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 
-# SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '273923138101-8ki4dpc66lgd79t8iitirdcf0cp39010.apps.googleusercontent.com'
-# SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+
 
 WSGI_APPLICATION = 'onenightprep.wsgi.application'
 
