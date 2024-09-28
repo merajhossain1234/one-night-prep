@@ -6,6 +6,13 @@ from django.db.models.signals import post_save
 from django.contrib.auth import get_user_model
 from uuid import uuid4
 
+class ParentModel(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        abstract = True
+        
 class User(AbstractUser):
     email = models.EmailField(max_length=254, unique=True)
     first_name = models.CharField(max_length=150,null=True,blank=True)
