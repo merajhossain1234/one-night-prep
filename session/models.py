@@ -74,7 +74,7 @@ class Message(ParentModel):
 # memoryKnowledge model
 class MemoryKnowledge(ParentModel):
     message = models.ForeignKey(Message, on_delete=models.CASCADE)
-    knowledge = models.ManyToManyField(KnowledgeBase, null=True, blank=True)
+    knowledge = models.ManyToManyField(KnowledgeBase,blank=True)
     
     def __str__(self):
         return self.id
@@ -89,3 +89,4 @@ class Note(ParentModel):
     
     def __str__(self):
         return self.title
+    
