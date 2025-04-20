@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-27uie(96pk2435s%d$7+%u3mu8elp3aq7ma$!g4j_ye)&in$)p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -116,22 +116,23 @@ WSGI_APPLICATION = 'onenightprep.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'onenightprep',  # Change this to your database name
-        'USER': 'Admin',  # Change this to your database user
-        'PASSWORD': '30xy75t',  # Change this to your database password
-        'HOST': 'db',  # This should match the service name in your docker-compose file
-        'PORT': '5432',  # Default PostgreSQL port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'onenightprep',  # Change this to your database name
+#         'USER': 'Admin',  # Change this to your database user
+#         'PASSWORD': '30xy75t',  # Change this to your database password
+#         'HOST': 'db',  # This should match the service name in your docker-compose file
+#         'PORT': '5432',  # Default PostgreSQL port
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
